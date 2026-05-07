@@ -13,11 +13,11 @@ const FuncionesPage = () => {
   const [salas, setSalas] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/peliculas")
+    fetch(`${import.meta.env.VITE_API_URL}/peliculas`)
       .then(r => r.json())
       .then(setPeliculas);
 
-    fetch("http://localhost:8080/api/salas")
+    fetch(`${import.meta.env.VITE_API_URL}/salas`)
       .then(r => r.json())
       .then(setSalas);
   }, []);

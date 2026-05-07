@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:8080/api/clasificaciones";
+const URL = `${import.meta.env.VITE_API_URL}/clasificaciones`;
 
 export const getClasificaciones = async () => {
   const res = await axios.get(URL);

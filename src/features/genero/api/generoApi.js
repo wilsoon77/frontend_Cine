@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:8080/api/generos";
+const URL = `${import.meta.env.VITE_API_URL}/generos`;
 
 export const getGeneros = async () => {
   const res = await axios.get(URL);
