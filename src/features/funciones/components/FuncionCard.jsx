@@ -20,6 +20,8 @@ const FuncionCard = ({ funcion, onDelete }) => {
     return hora;
   };
 
+  const [fecha, horaStr] = funcion.fechaHora ? funcion.fechaHora.split('T') : ["", ""];
+
   return (
     <div className="funcion-card">
 
@@ -35,8 +37,8 @@ const FuncionCard = ({ funcion, onDelete }) => {
 
         <p> Sala: {funcion.numeroSala}</p>
 
-        <p> Fecha: {funcion.fecha}</p>
-        <p> Hora: {formatHora(funcion.hora)}</p>
+        <p> Fecha: {fecha}</p>
+        <p> Hora: {formatHora(horaStr)}</p>
 
         <button onClick={() => onDelete(funcion.idFuncion)}>
           Eliminar

@@ -16,7 +16,7 @@ const MisBoletosPage = () => {
     }
   }, [user]);
 
-  if (isLoading) return <div style={{padding: "100px", color: "var(--color-text)", textAlign: "center"}}>Cargando boletos...</div>;
+  if (isLoading) return <div style={{ padding: "100px", color: "var(--color-text)", textAlign: "center" }}>Cargando boletos...</div>;
 
   return (
     <div style={{ padding: "40px", color: "var(--color-text)", maxWidth: "1000px", margin: "0 auto" }}>
@@ -30,10 +30,10 @@ const MisBoletosPage = () => {
       ) : (
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "20px" }}>
           {boletos.map(b => (
-            <div key={b.idBoleto} style={{ 
-              background: "linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-alt) 100%)", 
+            <div key={b.idBoleto} style={{
+              background: "linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-alt) 100%)",
               border: "1px solid var(--color-primary)",
-              borderRadius: "15px", 
+              borderRadius: "15px",
               padding: "20px",
               position: "relative",
               overflow: "hidden"
@@ -46,7 +46,7 @@ const MisBoletosPage = () => {
               <p style={{ marginBottom: "8px" }}><strong>Asiento:</strong> {b.fila}{b.numeroAsiento}</p>
               <p style={{ marginBottom: "8px" }}><strong>Fecha:</strong> {b.fecha}</p>
               <p style={{ marginBottom: "8px" }}><strong>Hora:</strong> {b.hora}</p>
-              <p style={{ marginTop: "15px", color: "var(--color-secondary)", fontSize: "1.2rem", fontWeight: "bold" }}>${b.precio.toFixed(2)}</p>
+              <p style={{ marginTop: "15px", color: "var(--color-secondary)", fontSize: "1.2rem", fontWeight: "bold" }}>Q{b.precio.toFixed(2)}</p>
             </div>
           ))}
         </div>

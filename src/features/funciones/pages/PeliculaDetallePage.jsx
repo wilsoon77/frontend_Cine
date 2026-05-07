@@ -104,7 +104,7 @@ const PeliculaDetallePage = () => {
                 transition: "all 0.3s"
               }}
             >
-              Sala {f.numeroSala} - {f.fecha} a las {f.hora}
+              Sala {f.numeroSala} - {f.fechaHora ? f.fechaHora.split('T')[0] : ''} a las {f.fechaHora ? f.fechaHora.split('T')[1].substring(0,5) : ''}
             </button>
           ))}
         </div>

@@ -29,8 +29,7 @@ const FuncionForm = ({ onSubmit, peliculas, salas }) => {
     const payload = {
       idPelicula: form.idPelicula,
       idSala: form.idSala,
-      fecha: form.fecha,
-      hora: `${form.fecha}T${form.hora}:00`
+      fechaHora: `${form.fecha}T${form.hora}:00`
     };
 
     onSubmit(payload, resetForm); // 🔥 IMPORTANTE
