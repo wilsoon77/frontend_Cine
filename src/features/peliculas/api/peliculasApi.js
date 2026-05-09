@@ -13,7 +13,7 @@ export const createPelicula = (data) =>
   });
 
 export const updatePelicula = (id, data) =>
-  axios.put(`${API_URL}/${id}`, data, {
+  axios.post(`${API_URL}/${id}`, data, {
     headers: { "Content-Type": "multipart/form-data" },
   });
 
